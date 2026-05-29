@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stardust Engineering | Nirved's Birthday</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config Verbatim -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#544600",
+                    "on-secondary": "#3a3000",
+                    "on-tertiary": "#00363a",
+                    "on-error": "#690005",
+                    "primary": "#b6c4ff",
+                    "surface-container-highest": "#32353c",
+                    "secondary": "#fff9ef",
+                    "outline": "#8f909d",
+                    "surface-container": "#1d2026",
+                    "secondary-container": "#ffdb3c",
+                    "primary-fixed": "#dce1ff",
+                    "surface-bright": "#363940",
+                    "on-surface": "#e1e2eb",
+                    "on-error-container": "#ffdad6",
+                    "error-container": "#93000a",
+                    "tertiary-fixed-dim": "#00dbe7",
+                    "on-primary-fixed": "#00164e",
+                    "secondary-fixed": "#ffe16d",
+                    "error": "#ffb4ab",
+                    "surface-tint": "#b6c4ff",
+                    "tertiary-fixed": "#74f5ff",
+                    "on-primary-fixed-variant": "#264191",
+                    "inverse-primary": "#4059aa",
+                    "primary-container": "#1e3a8a",
+                    "on-secondary-container": "#725f00",
+                    "inverse-surface": "#e1e2eb",
+                    "surface": "#10131a",
+                    "on-tertiary-fixed-variant": "#004f54",
+                    "secondary-fixed-dim": "#e9c400",
+                    "surface-dim": "#10131a",
+                    "surface-container-lowest": "#0b0e14",
+                    "background": "#10131a",
+                    "on-background": "#e1e2eb",
+                    "tertiary": "#00dbe7",
+                    "surface-container-high": "#272a31",
+                    "on-secondary-fixed": "#221b00",
+                    "outline-variant": "#444651",
+                    "on-tertiary-fixed": "#002022",
+                    "surface-container-low": "#191c22",
+                    "on-primary": "#05297a",
+                    "on-primary-container": "#90a8ff",
+                    "on-tertiary-container": "#00bfc9",
+                    "tertiary-container": "#00484c",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "surface-variant": "#32353c",
+                    "on-surface-variant": "#c5c5d3",
+                    "inverse-on-surface": "#2e3037"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-md": ["Manrope"],
+                    "headline-md": ["Space Grotesk"],
+                    "label-sm": ["Space Mono"],
+                    "display-lg": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"],
+                    "body-lg": ["Manrope"],
+                    "headline-lg-mobile": ["Space Grotesk"],
+                    "label-lg": ["Space Mono"],
+                    "display-lg-mobile": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-surface text-on-surface cosmic-grid min-h-screen font-body-md selection:bg-tertiary/30">
+<!-- Audio Element -->
+<audio id="bg-music" src="assets/music/Chota_Sa_Sitara.mp3" loop></audio>
+
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-xl border-b border-tertiary/20 shadow-[0_0_40px_rgba(30,58,170,0.1)]">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<span class="font-headline-md text-headline-md text-secondary-fixed tracking-tight">Stardust Engineering</span>
+<div class="hidden md:flex gap-8">
+<a class="text-tertiary border-b-2 border-tertiary pb-1 font-label-lg text-label-lg" href="#memories">Memories</a>
+<a class="text-on-surface-variant hover:text-tertiary transition-colors font-label-lg text-label-lg" href="#details">Journey</a>
+<a class="text-on-surface-variant hover:text-tertiary transition-colors font-label-lg text-label-lg" href="#blessings">Blessings</a>
+</div>
+<button id="music-btn" class="bg-secondary-fixed text-on-secondary-fixed px-6 py-2 rounded-full font-label-lg text-label-lg active:scale-95 transition-transform hover:bg-secondary-fixed-dim shadow-[0_0_15px_rgba(255,225,109,0.3)]">
+                RSVP
+            </button>
+</div>
+</nav>
+<main class="pt-24 space-y-24 pb-24">
+<!-- Hero Section: The Galactic Intro -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-center text-center">
+<div class="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-tertiary/30 bg-tertiary/5 mb-6">
+<span class="material-symbols-outlined text-[16px] text-tertiary">rocket_launch</span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">Orbital Launch 2026</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-secondary mb-4">Nirved’s Sweet Memories</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Journey through the stardust as we celebrate a cycle around the sun. A chronicle of light, laughter, and high-fidelity joy.</p>
+
+<div id="countdown" class="flex gap-4 justify-center mt-12 flex-wrap">
+    <div class="glass-panel p-4 rounded-xl text-center min-w-[100px] neon-glow-blue">
+        <span id="days" class="text-4xl font-bold text-tertiary font-headline-md">00</span>
+        <span class="block text-sm text-on-surface-variant uppercase tracking-widest mt-2">Days</span>
+    </div>
+    <div class="glass-panel p-4 rounded-xl text-center min-w-[100px] neon-glow-blue">
+        <span id="hours" class="text-4xl font-bold text-tertiary font-headline-md">00</span>
+        <span class="block text-sm text-on-surface-variant uppercase tracking-widest mt-2">Hours</span>
+    </div>
+    <div class="glass-panel p-4 rounded-xl text-center min-w-[100px] neon-glow-blue">
+        <span id="minutes" class="text-4xl font-bold text-tertiary font-headline-md">00</span>
+        <span class="block text-sm text-on-surface-variant uppercase tracking-widest mt-2">Minutes</span>
+    </div>
+    <div class="glass-panel p-4 rounded-xl text-center min-w-[100px] neon-glow-blue">
+        <span id="seconds" class="text-4xl font-bold text-tertiary font-headline-md">00</span>
+        <span class="block text-sm text-on-surface-variant uppercase tracking-widest mt-2">Seconds</span>
+    </div>
+</div>
+</section>
+
+<!-- Parents Note Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-24 relative" id="parents-note">
+    <div class="glass-panel rounded-3xl p-8 md:p-12 text-center max-w-4xl mx-auto border-t-2 border-secondary-container shadow-[0_0_50px_rgba(255,219,60,0.1)]">
+        <span class="text-6xl text-secondary-container block mb-6 opacity-50">❝</span>
+        <h2 class="font-headline-lg text-headline-lg text-secondary mb-6">Message from Mom & Dad</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant italic mb-8">
+            Nirved, our little prince, you have filled our lives with endless joy and laughter. Watching you grow over this past year has been the greatest blessing. We can't wait to celebrate your first magical milestone with our family and friends. We love you to the moon and back!
+        </p>
+        <div class="font-headline-md text-xl text-primary">- Mom & Dad ❤️</div>
+    </div>
+</section>
+
+<!-- Nebula Gallery: Photos -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="memories">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-gutter">
+<!-- Photo 1 -->
+<div class="glass-panel rounded-xl group transition-all duration-500 neon-glow-blue cursor-pointer aspect-square">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A cinematic portrait of a young boy smiling joyfully against a soft, dreamy cosmic background. The lighting is warm and golden, contrasting with deep indigo shadows. The style is hyper-realistic with a high-end fashion photography feel, emphasizing sparkling eyes and a sense of wonder." src="assets/images/E0F2BA1F-CE9B-49F6-9235-10A23C754436.JPG"/>
+</div>
+<!-- Photo 2 -->
+<div class="glass-panel rounded-xl group transition-all duration-500 neon-glow-blue cursor-pointer aspect-square md:col-span-2 md:row-span-2">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A stylized overhead shot of a birthday celebration table designed as a starship deck. Minimalist glowing plates, futuristic drinkware, and blue neon lighting accents. The overall mood is sophisticated, otherworldly, and celebratory, using a palette of cyan, gold, and deep space black." src="assets/images/IMG_20260409_151746.jpg"/>
+</div>
+<!-- Photo 3 -->
+<div class="glass-panel rounded-xl group transition-all duration-500 neon-glow-blue cursor-pointer aspect-square">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Abstract macro shot of glass prisms refracting light into rainbow patterns resembling a distant nebula. The image has a grainy holographic texture and high contrast, fitting a high-tech cosmic aesthetic. Light cyan and deep violet hues dominate the composition." src="assets/images/6233233174687322092.jpg"/>
+</div>
+<!-- Photo 4 -->
+<div class="glass-panel rounded-xl group transition-all duration-500 neon-glow-blue cursor-pointer aspect-square">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A young child dressed in a futuristic astronaut-inspired silver jacket, gazing up at a starry night sky. The scene is illuminated by a faint blue glow from a holographic interface. Cinematic lighting, ethereal atmosphere, and a sense of scientific discovery." src="assets/images/53498D58-2A16-440F-B1DB-F0FBDF630B50.JPG"/>
+</div>
+<!-- Photo 5 -->
+<div class="glass-panel rounded-xl group transition-all duration-500 neon-glow-blue cursor-pointer aspect-square">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Detailed close-up of a high-tech star map display on a transparent glass surface. Glowing lines, planetary coordinates, and data visualization elements in bright cyan. The background is a soft-focus laboratory setting with atmospheric blue lighting." src="assets/images/B109EFB7-00CC-4786-9868-1699A0031E11.JPG"/>
+</div>
+<!-- Photo 6 -->
+<div class="glass-panel rounded-xl group transition-all duration-500 neon-glow-blue cursor-pointer aspect-[4/5] lg:col-span-1">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A joyous group of family members laughing together at a modern event. The background features artistic lighting installations that resemble glowing constellations. The mood is warm and intimate, styled with a cinematic color grade favoring deep blues and bright highlights." src="assets/images/B2A65000-B5A0-4E82-8890-1D86AA00230E.PNG"/>
+</div>
+<!-- Photo 7 -->
+<div class="glass-panel rounded-xl group transition-all duration-500 neon-glow-blue cursor-pointer aspect-square">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="The Eiffel Tower at night, rendered in a futuristic dreamscape style with cybernetic neon patterns tracing its structure. A nod to travel and adventure, with a palette of vibrant gold and electric blue against a pitch-black starry sky." src="assets/images/2576DD19-77E3-490A-94A2-FC3C363D78A5.PNG"/>
+</div>
+<!-- Photo 8 -->
+<div class="glass-panel rounded-xl group transition-all duration-500 neon-glow-blue cursor-pointer aspect-square">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A high-key portrait of a smiling woman in elegant evening wear, backlit by a soft glowing ring light. The aesthetic is clean, sophisticated, and futuristic, with a subtle grain texture and glass-like clarity." src="assets/images/20260223_092855-IMG_STYLE.jpg"/>
+</div>
+<!-- Photo 9 -->
+<div class="glass-panel rounded-xl group transition-all duration-500 neon-glow-blue cursor-pointer aspect-square">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Futuristic colorful balloons floating in zero-gravity inside a glass enclosure. The balloons have metallic textures and reflect the blue neon surroundings. A whimsical yet technologically advanced celebratory visual." src="assets/images/C92F79F0-38DE-4127-A20E-ECF1998EC43B (1).PNG"/>
+</div>
+<!-- Photo 10 -->
+<div class="glass-panel rounded-xl group transition-all duration-500 neon-glow-blue cursor-pointer aspect-square lg:col-span-2">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A wide-angle shot of a luxurious garden event at twilight. String lights look like fallen stars, and large glass spheres are scattered on the lawn. The color palette is composed of teal, magenta, and deep navy, creating a magical, high-end atmosphere." src="assets/images/EE8EEFDA-DC72-4446-A426-5F93176A00D6.PNG"/>
+</div>
+</div>
+</section>
+<!-- Cosmic Invitation: Event Details -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="details">
+<div class="grid lg:grid-cols-2 gap-12 items-stretch">
+<!-- Left: Info -->
+<div class="glass-panel rounded-3xl p-8 md:p-12 flex flex-col justify-between">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-secondary mb-8">Celestial Coordinates</h2>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary text-[32px]">calendar_month</span>
+<div>
+<p class="font-label-lg text-label-lg text-tertiary uppercase mb-1">Time-Space Coordinate</p>
+<p class="font-headline-md text-headline-md text-on-surface">8 June 2026</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Arrival Window: 7:00 PM onwards</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary text-[32px]">location_on</span>
+<div>
+<p class="font-label-lg text-label-lg text-tertiary uppercase mb-1">Star System</p>
+<p class="font-headline-md text-headline-md text-on-surface">Kamkheda</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Sector: Main Banquet Hall</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 mt-12">
+<a class="flex-1 flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-label-lg text-label-lg text-white bg-green-600/20 neon-glow-green transition-all" href="https://wa.me/919782822911?text=I%20will%20join%20Nirved%27s%20birthday%20celebration">
+<span class="material-symbols-outlined">chat</span>
+                            Confirm on WhatsApp
+                        </a>
+<a href="https://maps.app.goo.gl/3v4bLkXycB8yjY3M8" target="_blank" class="flex-1 flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-label-lg text-label-lg border border-tertiary/50 hover:bg-tertiary/10 transition-all">
+<span class="material-symbols-outlined">map</span>
+                            Get Location
+                        </a>
+</div>
+</div>
+<!-- Right: QR and Identity -->
+<div class="glass-panel rounded-3xl p-8 md:p-12 flex flex-col items-center justify-center text-center relative">
+<div class="scan-line absolute top-0 left-0 w-full opacity-30"></div>
+<div class="p-4 bg-white rounded-2xl mb-6 shadow-[0_0_50px_rgba(255,255,255,0.15)]">
+<img alt="RSVP QR Code" class="w-48 h-48" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maps.app.goo.gl/3v4bLkXycB8yjY3M8"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-secondary mb-2">Access Key</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Scan to beam your details into our guest system.</p>
+<div class="px-6 py-2 rounded-full bg-surface-container-highest font-label-sm text-label-sm text-on-surface uppercase tracking-widest">
+                        Protocol ID: NV-2026-STARDUST
+                    </div>
+</div>
+</div>
+</section>
+<!-- Galaxy Blessings: Wishes -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="blessings">
+<div class="mb-12">
+<h2 class="font-headline-lg text-headline-lg text-secondary mb-4">Galaxy Blessings</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Transmit your interstellar wishes to Nirved. Every word becomes a star in our private galaxy.</p>
+</div>
+<div class="grid lg:grid-cols-3 gap-12">
+<!-- Wish Form -->
+<div class="lg:col-span-1 glass-panel rounded-3xl p-8 h-fit sticky top-24">
+<form id="wish-form" class="space-y-6">
+<div class="space-y-2">
+<label class="font-label-lg text-label-lg text-tertiary">TRANSMITTER IDENTITY</label>
+<input class="w-full bg-surface/50 border-0 border-b border-tertiary/30 focus:ring-0 focus:border-tertiary text-on-surface transition-all" id="wish-name" placeholder="Your Name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-lg text-label-lg text-tertiary">THE MESSAGE</label>
+<textarea class="w-full bg-surface/50 border-0 border-b border-tertiary/30 focus:ring-0 focus:border-tertiary text-on-surface transition-all" id="wish-message" placeholder="Your stardust blessing..." rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-tertiary text-on-tertiary font-label-lg text-label-lg rounded-xl hover:bg-tertiary-fixed-dim transition-colors uppercase tracking-widest flex items-center justify-center gap-2" type="submit">
+                            Launch Blessing
+                            <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+<!-- Wishes Feed -->
+<div id="wishes-container" class="lg:col-span-2 grid md:grid-cols-2 gap-6">
+<!-- Wish 1 -->
+<div class="glass-panel rounded-2xl p-6 star-card group hover:scale-[1.02] transition-transform">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center font-label-lg text-on-primary-container">RK</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Rajesh Kumar</p>
+<p class="font-label-sm text-label-sm text-tertiary/60">2 minutes ago</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Happy Birthday Nirved! May your journey be as vast and beautiful as the cosmos. Shine bright like the star you are!</p>
+</div>
+<!-- Wish 2 -->
+<div class="glass-panel rounded-2xl p-6 star-card group hover:scale-[1.02] transition-transform">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center font-label-lg text-on-tertiary-container">AM</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Anjali Mehta</p>
+<p class="font-label-sm text-label-sm text-tertiary/60">1 hour ago</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Wishing you a universe of happiness, little prince. Can't wait to celebrate this magical milestone with the whole family.</p>
+</div>
+<!-- Wish 3 -->
+<div class="glass-panel rounded-2xl p-6 star-card group hover:scale-[1.02] transition-transform">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center font-label-lg text-on-secondary-container">VS</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Vikram Singh</p>
+<p class="font-label-sm text-label-sm text-tertiary/60">3 hours ago</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Engineering a perfect day for a perfect boy! Have an amazing birthday trip around the sun, Nirved!</p>
+</div>
+<!-- Wish 4 -->
+<div class="glass-panel rounded-2xl p-6 star-card group hover:scale-[1.02] transition-transform">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center font-label-lg text-on-surface-variant">SS</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Sneha Sharma</p>
+<p class="font-label-sm text-label-sm text-tertiary/60">Yesterday</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">To the moon and back! That's how much we love you. Happy Birthday to our favorite little explorer!</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-lowest/30 backdrop-blur-md border-t border-tertiary/10">
+<div class="flex flex-col items-center gap-6 px-margin-desktop">
+<span class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary">Stardust Engineering</span>
+<!-- Social Media Links -->
+<div class="flex gap-8">
+<a class="group flex items-center gap-2 text-on-surface-variant hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="https://www.instagram.com/nirvedverma/">
+<span class="material-symbols-outlined text-[20px]">camera</span>
+<span class="font-label-lg text-label-lg">Instagram</span>
+</a>
+<a class="group flex items-center gap-2 text-on-surface-variant hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="https://www.facebook.com/profile.php?id=61586581713479">
+<span class="material-symbols-outlined text-[20px]">public</span>
+<span class="font-label-lg text-label-lg">Facebook</span>
+</a>
+</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors font-label-sm text-label-sm" href="#">The Asteroid</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors font-label-sm text-label-sm" href="#">Star Maps</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors font-label-sm text-label-sm" href="#">Privacy Beam</a>
+</div>
+<p class="font-label-sm text-label-sm text-tertiary/60 mt-4">© 12024 Stardust Engineering. Born of a Rose.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Mouse movement light effect
+        document.addEventListener('mousemove', (e) => {
+            const panels = document.querySelectorAll('.glass-panel');
+            const x = e.clientX;
+            const y = e.clientY;
+            
+            panels.forEach(panel => {
+                const rect = panel.getBoundingClientRect();
+                const localX = x - rect.left;
+                const localY = y - rect.top;
+                
+                // If mouse is near the card, create a subtle directional glow
+                if (localX > -100 && localX < rect.width + 100 && localY > -100 && localY < rect.height + 100) {
+                    panel.style.setProperty('--mouse-x', `${localX}px`);
+                    panel.style.setProperty('--mouse-y', `${localY}px`);
+                }
+            });
+        });
+
+        // Form submission animation mock
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Launching...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Transmitted';
+                btn.classList.add('bg-green-600', 'text-white');
+                form.reset();
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('bg-green-600', 'text-white');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+    <script src="script.js"></script>
+</body></html>
