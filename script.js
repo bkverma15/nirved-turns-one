@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (distance <= 0) {
             // Birthday Mode!
             clearInterval(countdownInterval);
-            countdownContainer.style.display = 'none';
-            heroTitle.innerHTML = "Happy Birthday Nirved 🎉🎂";
-            heroSubtitle.textContent = "Our little prince turns one today!";
-            triggerConfetti();
+            if (countdownContainer) countdownContainer.style.display = 'none';
+            if (heroTitle) heroTitle.innerHTML = "Happy Birthday Nirved 🎉🎂";
+            if (heroSubtitle) heroSubtitle.textContent = "Our little prince turns one today!";
+            if (confettiCanvas) triggerConfetti();
             
             // Render zeros just in case
             daysEl.textContent = "00";
@@ -104,32 +104,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxImg = document.getElementById('lightbox-img');
     const closeLightboxBtn = document.querySelector('.close-lightbox');
 
-    galleryImages.forEach(img => {
-        img.addEventListener('click', () => {
-            lightboxImg.src = img.src;
-            lightbox.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+    if (lightbox && closeLightboxBtn) {
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
         });
-    });
 
-    closeLightboxBtn.addEventListener('click', closeLightbox);
-    
-    lightbox.addEventListener('click', (e) => {
-        if (e.target !== lightboxImg) {
-            closeLightbox();
+        closeLightboxBtn.addEventListener('click', closeLightbox);
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                closeLightbox();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                closeLightbox();
+            }
+        });
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
         }
-    });
-
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
-            closeLightbox();
-        }
-    });
-
-    function closeLightbox() {
-        lightbox.classList.add('hidden');
-        document.body.style.overflow = ''; // Restore scrolling
     }
 
     // 4. Wishes Form with LocalStorage
@@ -203,13 +205,12 @@ document.addEventListener('DOMContentLoaded', () => {
         musicBtn.addEventListener('click', () => {
             if (isPlaying) {
                 bgMusic.pause();
-                musicBtn.textContent = 'Play Music 🎵';
+                musicBtn.innerHTML = '<span class="material-symbols-outlined text-2xl">music_note</span>';
             } else {
                 bgMusic.play().then(() => {
-                    musicBtn.textContent = 'Pause Music ⏸️';
+                    musicBtn.innerHTML = '<span class="material-symbols-outlined text-2xl">music_off</span>';
                 }).catch(error => {
                     console.log("Audio play failed:", error);
-                    alert("Please add 'birthday.mp3' to 'assets/music/' folder for music to play.");
                 });
             }
             isPlaying = !isPlaying;
