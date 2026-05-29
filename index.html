@@ -118,14 +118,9 @@
 <a class="text-on-surface-variant hover:text-tertiary transition-colors font-label-lg text-label-lg" href="#details">Journey</a>
 <a class="text-on-surface-variant hover:text-tertiary transition-colors font-label-lg text-label-lg" href="#blessings">Blessings</a>
 </div>
-<div class="flex items-center gap-4">
-    <button id="music-btn" class="text-tertiary border border-tertiary/30 px-4 py-2 rounded-full font-label-lg text-label-lg hover:bg-tertiary/10 transition-colors hidden sm:block">
-        Play Music 🎵
-    </button>
-    <button onclick="document.getElementById('details').scrollIntoView({behavior: 'smooth'})" class="bg-secondary-fixed text-on-secondary-fixed px-6 py-2 rounded-full font-label-lg text-label-lg active:scale-95 transition-transform hover:bg-secondary-fixed-dim shadow-[0_0_15px_rgba(255,225,109,0.3)]">
-        Join Us
-    </button>
-</div>
+<button onclick="document.getElementById('details').scrollIntoView({behavior: 'smooth'})" class="bg-secondary-fixed text-on-secondary-fixed px-6 py-2 rounded-full font-label-lg text-label-lg active:scale-95 transition-transform hover:bg-secondary-fixed-dim shadow-[0_0_15px_rgba(255,225,109,0.3)]">
+    Join Us
+</button>
 </div>
 </nav>
 <main class="pt-24 space-y-24 pb-24">
@@ -274,7 +269,7 @@
 </div>
 <div class="grid lg:grid-cols-3 gap-12">
 <!-- Wish Form -->
-<div class="lg:col-span-1 glass-panel rounded-3xl p-8 h-fit sticky top-24">
+<div class="lg:col-span-1 glass-panel rounded-3xl p-8 h-fit lg:sticky top-24 z-10 bg-surface/90">
 <form id="wish-form" class="space-y-6">
 <div class="space-y-2">
 <label class="font-label-lg text-label-lg text-tertiary">TRANSMITTER IDENTITY</label>
@@ -363,6 +358,12 @@
 <p class="font-label-sm text-label-sm text-tertiary/60 mt-4">© 2026 Nirved's 1st Birthday Celebration.</p>
 </div>
 </footer>
+
+<!-- Floating Music Button -->
+<button id="music-btn" class="fixed bottom-6 right-6 z-50 bg-tertiary text-on-tertiary w-14 h-14 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,219,231,0.4)] hover:scale-110 transition-transform" title="Play Music">
+    <span class="material-symbols-outlined text-2xl">music_note</span>
+</button>
+
 <script>
         // Micro-interaction: Mouse movement light effect
         document.addEventListener('mousemove', (e) => {
